@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Capybarewery </title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="capystyles22.css">
+    <link rel="stylesheet" href="capycsscolors.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ggm0rhl.css">
+
+<style>
+    
+	 <link rel="stylesheet" href="https://use.typekit.net/ggm0rhl.css">
+	
+
+    .left4 {
+    flex-grow: 2;
+    height: 500px;
+    background-color: #f3988b;
+    border-radius: 15px;
+    margin: 10px;
+    }
+	
+	.right2 {
+    flex-grow: 2;
+    height: 500px;
+    background-color: #f3988b;
+    border-radius: 15px;
+    margin: 10px;
+    }
+    
+    
+    .left {
+        flex-grow: 2;
+		flex-basis: 180px;
+		height: auto;
+		background-color: #f3988b;
+        border-radius: 15px;
+        box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.4);
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 0 10px;
+        margin-top: 30px;
+		display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        
+    }
+    
+    
+    .right {
+    flex-grow: 5;
+    background-color: #f2e7e4;
+    flex-basis: 400px;
+    height: auto;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.4);
+    margin: 0 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    justify-content: center;
+    }
+    
+    
+    #mainimg {
+        
+		width: auto;
+		height: 100%;
+        
+    }
+	
+	.mainimgbox {
+   		 width: auto;
+    	height: 600px;
+	}
+	
+	#title {
+    background-color: #f3988b;
+    width: 100%;
+    height: 50px;
+	line-height: 50px;
+	color: black;
+	font-family: Jubilat, sans-serif;
+	font-size: 30px;
+    font-weight: 700;
+	padding: 5px 0px 5px 0px;
+    text-align: center;
+	}
+	
+	#caption {
+    background-color: #1d2848;
+    width: 100%;
+    height: 25px;
+	line-height: 25px;
+	color: white;
+	font-family: Jubilat, sans-serif;
+	font-size: 13px;
+    font-weight: 200;
+	padding: 5px 0px 5px 0px;
+    text-align: center;
+	}
+	
+    .imgboxleft {
+        width: 100%;
+		height: auto;
+    }
+    
+	.imgbox {
+		float: none;
+	}
+	
+    
+       @media screen and (max-width:750px) {
+		
+		#mainimg {
+			width: 100%;
+			height: auto;
+		}
+		
+		.mainimgbox {
+			width: 70%;
+			height: auto;
+		}
+
+	}
+    
+	@media screen and (max-width:580px) {
+		
+	.menu {
+    width: 420px;
+		}
+
+		
+	.headertype {
+		font-size: 18px;	
+		}
+    
+
+</style>
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+
+$(document).ready(function(){
+		
+	
+      $(".imgboxleft").css("opacity", "0.5");
+    
+      $(".imgboxleft").on("mouseover", function(){
+           $(this).css("opacity", "1");                 
+      })
+	
+	  $(".imgboxleft").on("mouseout", function(){
+           $(this).css("opacity", "0.5");                 
+      })
+      
+	
+      $(".imgboxleft").on("click", function(){
+		  $(".imgboxleft").css("border", "0px");  
+		  $(this).css("border", "solid 2px black");  
+		 
+		  $("#mainimg").hide();
+		  $("#caption").hide();
+		   
+		  var imgsrc = $(this).attr("src");
+          $("#mainimg").attr("src", imgsrc);  
+		  
+		  var var2 =  $(this).attr("alt");
+          $("#caption").html(var2);
+	
+		  $("#mainimg").fadeIn();
+		  $("#caption").fadeIn();
+		  $(this).css("opacity", "1");  
+		  
+		  
+		     }); 
+	
+	//Set the css border-width of ALL thumbs to 0px (by class) and the border-width of THAT thumb to 2px.
+    });
+
+</script>	
+	
+</head>
+    
+<body>
+	
+    <div id="containerback">
+        
+    <div id="container"> 
+        
+        <div id="header">
+        <div class="menu">
+        <div class="headerbuttons" >
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryMenu2.html">Menu</a></p>
+        </div>
+         
+        <div class="headerbuttons" >
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybrewerystore2.html">Store</a></p>
+        </div>
+        <div class="headerbuttons2" >
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryContact2.html">Contact</a></p>
+        </div>
+        <div class="headerbuttons2">
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybarewerystory2.html">Story</a></p>
+        </div>
+        </div>
+	
+       </div>
+        
+    <div id="innercontainer">
+        
+
+
+
+    
+	
+	  <div class="section" >
+			
+		 <div class="jubibold darkbluebg block1 whitetxt" style="font-size: 45px;">Daily Dose of Cute</div>
+		<div class="left">
+			
+			
+			<div class="left4" style="margin: 10px;">
+			
+			<img class="imgboxleft" src="capy1.png" alt="Capybara Meme 1">
+			<img class="imgboxleft" src="capy2.jpeg" alt="Capybara Meme 2">
+			<img class="imgboxleft" src="capy3.png" alt="Capybara Meme 3">
+			<img class="imgboxleft" src="capy7.jpeg" alt="Capybara Meme 4">
+				
+			</div>
+			
+			<div class="right2">
+			
+			<img class="imgboxleft" src="capy4.jpeg" alt="Capybara Meme 5">
+			<img class="imgboxleft" src="capy5.jpg" alt="Capybara Meme 6">
+			<img class="imgboxleft" src="capy6.jpeg" alt="Capybara Meme 7">
+			<img class="imgboxleft" src="capybara2.gif" alt="Capybara Gif">
+
+			</div>
+			
+			
+		</div>
+			
+		<div class="right">
+			<div id="title">Capybary Memes</div>
+		  <div class="mainimgbox">
+			<img id="mainimg" src="capy5.jpg" alt="capybarameme">
+			</div>
+		  <div id="caption">This is a caption</div>
+</div>
+			
+		</div><!-- end section -->
+		
+
+    </div>
+        
+        </div>
+        
+    <div class='footer'>
+
+    <div class='footerwood'> Copyright 2021 @sheepianna1 - Legal | Alcohol License</div>
+    </div>
+                
+    
+    
+     <a id="logo" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryhome2.html"></a>
+    
+    </div>
+
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,633 @@
+<html>
+  <head>
+    <title>Buy Suono</title>
+    <script src="http://iyawebdev.com/jqm.js"></script>
+    <script src="http://iyawebdev.com/jqui.min.js"></script>
+    <meta charset="utf-8" />
+    <script src="p5/p5.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="suonostyles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nzu2jwc.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #navbar {
+        z-index: 10;
+      }
+      #footer {
+        clear: both;
+      }
+      .product {
+        background-color: #1d1e1e;
+        width: 70%;
+        height: 200px;
+        margin-left: 32px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        border-radius: 25px;
+        float: left;
+        padding: 20px;
+      }
+      .preview {
+        width: auto;
+        height: 160px;
+        top: 20px;
+        left: 20px;
+        position: relative;
+        float: left;
+      }
+      .producttitle {
+        float: left;
+        margin-left: 25px;
+        position: relative;
+        top: 20px;
+      }
+      .productdescription {
+        clear: both;
+        position: relative;
+        left: 200px;
+        top: -60px;
+      }
+      .pricetag {
+        float: right;
+        position: relative;
+        top: -120px;
+        margin-right: 32px;
+      }
+      .quantifier {
+        margin-top: 26%;
+        display: block;
+      }
+      .amount {
+        float: right;
+        margin-right: 32px;
+        background-color: #2a5371;
+        height: 200px;
+        margin-top: 12px;
+        width: 280px;
+        border-radius: 25px;
+      }
+      .quantity {
+        width: 50%;
+        height: 50px;
+        font-size: larger;
+        border-radius: 10px;
+        border: none;
+      }
+      .label {
+        color: #f7f9f9;
+        margin-left: 25px;
+        margin-right: 25px;
+        font-family: "Mukta Vaani";
+        font-size: larger;
+      }
+      #total {
+        float: right;
+        margin-right: 32px;
+        background-color: #2a5371;
+        height: 50px;
+        margin-top: 12px;
+        width: 280px;
+        border-radius: 25px;
+        margin-bottom: 50px;
+      }
+      #totalcontainer {
+        margin-top: 10px;
+        font-family: "Mukta Vaani";
+        text-align: center;
+      }
+      #totalbox {
+        width: 50%;
+        background-color: white;
+        height: 25px;
+        font-size: larger;
+        border-radius: 10px;
+        border: none;
+        float: right;
+        margin-right: 32px;
+        margin-top: 2px;
+        padding-bottom: 3px;
+        padding-top: -3px;
+      }
+      #discountcontainer {
+        background-color: #1d1e1e;
+        width: 80%;
+        height: 50px;
+        margin-left: 32px;
+        margin-bottom: 12px;
+        margin-top: 32px;
+        border-radius: 25px;
+        float: left;
+      }
+      #discountlabel {
+        margin-left: 32px;
+        float: left;
+      }
+      #progress {
+        width: 75%;
+        background-color: black;
+        float: left;
+        position: relative;
+        top: 10px;
+        margin-left: 32px;
+        border-radius: 5px;
+      }
+
+      #bar {
+        width: 0%;
+        height: 30px;
+        background-color: #c5fffd;
+        float: left;
+        transition: 0.75s;
+        border-radius: 5px;
+      }
+a.button{
+margin: auto;
+display:inline-block;
+padding: 0.55em 1.4em;
+border: 0.1em solid #FFFFFF;
+margin:0 0.5em 0.5em 0;
+border-radius:0.2em;
+box-sizing: border-box;
+font-size: 15pt;
+text-decoration:none;
+font-family:neue-kabel;
+font-weight:300;
+color:#FFFFFF;
+text-align:center;
+transition: all 0.2s;
+}
+a.button:hover{
+color:#43D3FE;
+background-color: #FFFFFF;
+}
+#checkout 
+{
+  clear: both;
+  float: right;
+        margin-right: 32px;
+        margin-top: 12px;
+        border-radius: 25px;
+        margin-bottom: 50px;
+        padding: 0px;
+        position: relative;
+        top: -32px;
+}
+#checkoutcontainer
+{
+  margin-top: 10px;
+        font-family: "Mukta Vaani";
+        text-align: center;
+}
+
+      @media screen and (max-width: 1500px) {
+        #total {
+          margin-top: 60px;
+        }
+
+        #progress {
+          width: 50%;
+        }
+
+        #discountcontainer {
+          width: 100%;
+          margin-left: 0px;
+          margin-bottom: 0px;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        .product {
+          background-color: #1d1e1e;
+          width: 70%;
+          height: 200px;
+          margin-left: 32px;
+          margin-bottom: 12px;
+          margin-top: 12px;
+          border-radius: 25px;
+          float: left;
+          padding: 10px;
+        }
+        .pricetag {
+          float: left;
+          position: relative;
+          top: -60px;
+          left: 200px;
+          margin-right: 32px;
+        }
+
+        .product {
+          float: none;
+          margin: 0px;
+          width: 100%;
+          margin-top: 30px;
+        }
+
+        .preview {
+          position: static;
+        }
+
+        .amount {
+          float: none;
+          margin: 0px;
+          margin-top: -50px;
+          height: 60px;
+        }
+
+        .productdescription {
+          position: static;
+          clear: none;
+        }
+        .producttitle {
+          position: static;
+          float: none;
+        }
+
+        .pricetag {
+          float: none;
+          position: static;
+        }
+      }
+
+      @media screen and (max-width: 470px) {
+        .preview {
+          width: auto;
+          height: 100px;
+        }
+      }
+    </style>
+    <!-- <script src="model3d.js"></script>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="jquery.cookie.js"></script>
+  </head>
+  <body>
+    <div id="navbar">
+      <div class="navbuttonsdiv">
+        <div id="logo">
+          <a href="suonoshomepage.html"></a>
+          <div id="sketch"></div>
+        </div>
+            
+        <script src="p5/sketch.js"></script>
+        <a class="navbuttons" href="suonoshomepage.html"> HOME </a>
+        <a class="navbuttons" href="ourproduct.html"> OUR PRODUCT </a>
+        <a class="navbuttons" href="team.html"> TEAM </a>
+        <a class="navbuttons" href="invest.html"> INVEST </a>
+        <a class="navbuttons" href="login.html"> LOG IN </a>
+      </div>
+    </div>
+
+    <div id="container">
+      <h1 style="text-align: center; margin-top: 135px">Our Products</h1>
+
+      <div class="product">
+        <img src="panelpic3fsd.png" alt="the product" class="preview" />
+        <h3 class="producttitle">Sound Proof Panels (2 x 2)</h3>
+        <p class="productdescription">
+          This is where a description of the product goes.
+        </p>
+        <h5 class="pricetag">8.99 USD</h5>
+      </div>
+      <div class="amount">
+        <form class="quantifier">
+          <label class="label">Quantity</label>
+          <input
+            type="number"
+            class="quantity"
+            id="quantity1"
+            value="0"
+            min="0"
+            style="text-align: center"
+          />
+        </form>
+        <script>
+          var quantity1 = 0;
+          document
+            .querySelector("#quantity1")
+            .addEventListener("change", function () {
+              quantity1 = document.querySelector("#quantity1").value;
+            });
+        </script>
+      </div>
+
+      <div class="product">
+        <img src="panelpic3fsd.png" alt="the product" class="preview" />
+        <!-- <div class="preview" style="width: 160px;">
+                <model-3d background-color="#1d1e1e" src="panda.glb"></model-3d> 
+                Code comes from https://github.com/SamsungInternet/3D-model
+            </div> -->
+        <h3 class="producttitle">Sound Proof Panels (3 x 3)</h3>
+        <p class="productdescription">
+          This is where a description of the product goes.
+        </p>
+        <h5 class="pricetag">12.99 USD</h5>
+      </div>
+      <div class="amount">
+        <form class="quantifier">
+          <label class="label">Quantity</label>
+          <input
+            type="number"
+            class="quantity"
+            id="quantity2"
+            value="0"
+            min="0"
+            style="text-align: center"
+          />
+        </form>
+        <script>
+          var quantity2 = 0;
+          document
+            .querySelector("#quantity2")
+            .addEventListener("change", function () {
+              quantity2 = document.querySelector("#quantity2").value;
+            });
+        </script>
+      </div>
+
+      <div class="product">
+        <img src="panelpic3fsd.png" alt="the product" class="preview" />
+        <h3 class="producttitle">Sound Proof Panels (5 x 5)</h3>
+        <p class="productdescription">
+          This is where a description of the product goes.
+        </p>
+        <h5 class="pricetag">15.99 USD</h5>
+      </div>
+      <div class="amount">
+        <form class="quantifier">
+          <label class="label">Quantity</label>
+          <input
+            type="number"
+            class="quantity"
+            id="quantity3"
+            value="0"
+            min="0"
+            style="text-align: center"
+          />
+        </form>
+        <script>
+          var quantity3 = 0;
+          document
+            .querySelector("#quantity3")
+            .addEventListener("change", function () {
+              quantity3 = document.querySelector("#quantity3").value;
+            });
+        </script>
+      </div>
+
+      <hr style="clear: both; width: 280px; float: right; margin-right: 32px" />
+      <script>
+        document.querySelector("#quantity1").value = getCookie("2by2");
+        document.querySelector("#quantity2").value = getCookie("3by3");
+        document.querySelector("#quantity3").value = getCookie("5by5");
+        document.querySelector("#totalbox").innerHTML = getCookie("total");
+        document.querySelector("#bar").style.width = getCookie("percentage");
+        document.querySelector("#discountamount").innerHTML = getCookie("discount");
+
+        function getCookie(name) {
+          var cookieLen = name.length;
+          var cLen = document.cookie.length;
+          var i = 0;
+          var cEnd;
+
+          while (i < cLen) {
+            var j = i + cookieLen;
+            if (document.cookie.substring(i, j) == name) {
+              cEnd = document.cookie.indexOf(";", j);
+
+              if (cEnd == -1) {
+                cEnd = document.cookie.length;
+              }
+
+              return unescape(document.cookie.substring(j + 1, cEnd));
+            }
+            i++;
+          }
+
+          return " ";
+        }
+      </script>
+
+      <div id="discountcontainer">
+        <p id="discountlabel">Discount Progression</p>
+        <div id="progress">
+          <div id="bar"></div>
+        </div>
+        <p id="discountamount" style="margin-left: 32px; float: left">
+          5% Off!
+        </p>
+        <script>
+          document.querySelector("#bar").style.width = getCookie("percentage") + "%";
+          var quantity = 0;
+          var quantityw = 0;
+          var m = 10;
+          document
+            .querySelector("#quantity1")
+            .addEventListener("change", function () {
+              quantity =
+                parseInt(quantity1) + parseInt(quantity2) + parseInt(quantity3);
+              document.querySelector("#totalbox").innerHTML = total;
+              if (quantity < 10) {
+                document.querySelector("#bar").style.width =
+                quantity * 10 + "%";
+                m = 10;
+                quantityw = quantity;
+              } else if (quantity == 10) {
+                document.querySelector("#bar").style.width = 0 + "%";
+              } else if (quantity >= 10 && quantity < 25) {
+                document.querySelector("#bar").style.width =
+                (quantity-10) * 6.66 + "%";
+                m = 6.66;
+                quantityw = quantity - 10;
+              } else if (quantity == 25) {
+                document.querySelector("#bar").style.width = 0 + "%";
+              } else if (quantity >= 25 && quantity <= 50) {
+                document.querySelector("#bar").style.width =
+                (quantity-25) * 4 + "%";
+                m = 4;
+                quantityw = quantity - 25;
+              }
+              percentage = document.querySelector("#bar").style.width;
+              document.cookie = "2by2 = " + quantity1;
+              document.cookie = "percentage = " + (quantityw * m);
+            });
+          
+          document
+            .querySelector("#quantity2")
+            .addEventListener("change", function () {
+              quantity =
+                parseInt(quantity1) + parseInt(quantity2) + parseInt(quantity3);
+              document.querySelector("#totalbox").innerHTML = total;
+              if (quantity < 10) {
+                document.querySelector("#bar").style.width =
+                quantity * 10 + "%";
+                m = 10;
+                quantityw = quantity;
+              } else if (quantity == 10) {
+                document.querySelector("#bar").style.width = 0 + "%";
+              } else if (quantity >= 10 && quantity < 25) {
+                document.querySelector("#bar").style.width =
+                (quantity-10) * 6.66 + "%";
+                m = 6.66;
+                quantityw = quantity - 10;
+              } else if (quantity == 25) {
+                document.querySelector("#bar").style.width = 0 + "%";
+              } else if (quantity >= 25 && quantity <= 50) {
+                document.querySelector("#bar").style.width =
+                (quantity-25) * 4 + "%";
+                m = 4;
+                quantityw = quantity - 25;
+              }
+              percentage = document.querySelector("#bar").style.width;
+              document.cookie = "3by3 = " + quantity2;
+              document.cookie = "percentage = " + (quantityw * m);
+            });
+
+          document
+            .querySelector("#quantity3")
+            .addEventListener("change", function () {
+              quantity =
+                parseInt(quantity1) + parseInt(quantity2) + parseInt(quantity3);
+                document.querySelector("#totalbox").innerHTML = total;
+              if (quantity < 10) {
+                document.querySelector("#bar").style.width =
+                quantity * 10 + "%";
+                m = 10;
+                quantityw = quantity;
+              } else if (quantity == 10) {
+                document.querySelector("#bar").style.width = 0 + "%";
+              } else if (quantity >= 10 && quantity < 25) {
+                document.querySelector("#bar").style.width =
+                (quantity-10) * 6.66 + "%";
+                m = 6.66;
+                quantityw = quantity - 10;
+              } else if (quantity == 25) {
+                document.querySelector("#bar").style.width = 0 + "%";
+              } else if (quantity >= 25 && quantity <= 50) {
+                document.querySelector("#bar").style.width =
+                (quantity-25) * 4 + "%";
+                m = 4;
+                quantityw = quantity - 25;
+              }
+              percentage = document.querySelector("#bar").style.width;
+              document.cookie = "5by5 = " + quantity3;
+              document.cookie = "percentage = " + (quantityw * m); //having issues with this cookie because quantity * 10 will create a bar that is wayyy too long and go beyond the progress bar
+            });
+        </script>
+      </div>
+
+      <div id="total">
+        <div id="totalcontainer">
+          <label class="label" style="float: left; margin-left: 32px"
+            >Total</label
+          >
+          <div id="totalbox"></div>
+        </div>
+        <script>
+          var total = 0;
+          var total1 = 0;
+          var total2 = 0;
+          var total3 = 0;
+          var quantity = parseInt(getCookie("2by2")) + parseInt(getCookie("3by3")) + parseInt(getCookie("5by5"));
+          document.querySelector("#totalbox").innerHTML = getCookie("total");
+          document.querySelector("#discountamount").innerHTML = getCookie("discount");
+          document
+            .querySelector("#quantity1")
+            .addEventListener("change", function () {
+              total1 = quantity1 * 8.99;
+              totalr = total1 + total2 + total3;
+              if (quantity < 10) {
+                document.querySelector("#discountamount").innerHTML = "5% Off!";
+              } else if (quantity >= 10 && quantity < 25) {
+                totalr *= 0.95;
+                document.querySelector("#discountamount").innerHTML = "10% Off!";
+              } else if (quantity >= 25 && quantity < 50) {
+                totalr *= 0.9;
+                document.querySelector("#discountamount").innerHTML = "15% Off!";
+              } else if (quantity >= 50) {
+                totalr *= 0.85;
+              }
+              total = totalr.toFixed(2);
+              document.querySelector("#totalbox").innerHTML = total;
+              document.cookie = "total = " + total;
+              document.cookie = "discount = " + document.querySelector("#discountamount").innerHTML;
+            });
+
+          document
+            .querySelector("#quantity2")
+            .addEventListener("change", function () {
+              total2 = quantity2 * 12.99;
+              totalr = total1 + total2 + total3;
+              if (quantity < 10) {
+                document.querySelector("#discountamount").innerHTML = "5% Off!";
+              } else if (quantity >= 10 && quantity < 25) {
+                totalr *= 0.95;
+                document.querySelector("#discountamount").innerHTML = "10% Off!";
+              } else if (quantity >= 25 && quantity < 50) {
+                totalr *= 0.9;
+                document.querySelector("#discountamount").innerHTML = "15% Off!";
+              } else if (quantity >= 50) {
+                totalr *= 0.85;
+              }
+              total = totalr.toFixed(2);
+              document.querySelector("#totalbox").innerHTML = total;
+              document.cookie = "total = " + total;
+              document.cookie = "discount = " + document.querySelector("#discountamount").innerHTML;
+            });
+
+          document
+            .querySelector("#quantity3")
+            .addEventListener("change", function () {
+              total3 = quantity3 * 15.99;
+              totalr = total1 + total2 + total3;
+              if (quantity < 10) {
+                document.querySelector("#discountamount").innerHTML = "5% Off!";
+              } else if (quantity >= 10 && quantity < 25) {
+                totalr *= 0.95;
+                document.querySelector("#discountamount").innerHTML = "10% Off!";
+              } else if (quantity >= 25 && quantity < 50) {
+                totalr *= 0.9;
+                document.querySelector("#discountamount").innerHTML = "15% Off!";
+              } else if (quantity >= 50) {
+                totalr *= 0.85;
+              }
+              total = totalr.toFixed(2);
+              document.querySelector("#totalbox").innerHTML = total;
+              document.cookie = "total = " + total;
+              document.cookie = "discount = " + document.querySelector("#discountamount").innerHTML;
+            });
+        </script>
+      </div>
+      <div id="checkout">
+          <a class="button" href="checkout.html">Checkout!</a>
+        </div>
+      <br /><br />
+      <iframe
+        src="https://myhub.autodesk360.com/ue2a5fb8d/shares/public/SH919a0QTf3c32634dcf366f8d42217128b0?mode=embed"
+        width="40%"
+        height="40%"
+        allowfullscreen="true"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true"
+        frameborder="0"
+        style="
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          clear: both;
+        "
+      ></iframe>
+      <br /><br />
+    </div>
+
+    <div id="footer">
+      <img src="suonocorner2.png" alt="panels" class="bottomleft" />
+      <img src="suonocorner1.png" alt="panels" class="bottomright" />
+      <br />
+      Copyright 2021 Suono - IYA C7 Case Studies Spring
+    </div>
+  </body>
+</html>

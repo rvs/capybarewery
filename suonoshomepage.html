@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <title> Suono Website </title>
+      <script src="http://code.jquery.com/jquery.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="p5/sketch.js"></script>
+    <link rel="stylesheet" href="suonostyles.css">
+   <link rel="stylesheet" href="https://use.typekit.net/nzu2jwc.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+    
+<style>   
+    
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&display=swap');
+    
+    #mission{
+        width: auto;
+    }
+    
+    #sideimage {
+        width: auto;
+        float: right;
+    }
+    
+    .imgblock {
+        width: 670px;    
+    }
+    
+    .imgblock2 {
+        width: 670px;
+        height: 1000px;
+        
+        
+    }
+    
+
+    .img {
+        width:80%;
+        margin: auto;
+        text-align:center;
+        object-fit: contain;
+        opacity:0;
+
+    }
+    #img2 {
+        width: 400px;
+        z-index: -2;
+    }
+    #img3 {
+        height: 400px;
+        z-index: -2;
+    }
+    
+    .description{
+    }
+      .description2{
+        width: 400px;
+    }
+    
+    a.button{
+    margin: auto;
+     display:inline-block;
+     padding:0.55em 1.4em;
+     border:0.1em solid #FFFFFF;
+     margin:0 0.5em 0.5em 0;
+     border-radius:0.2em;
+     box-sizing: border-box;
+        font-size: 15pt;
+     text-decoration:none;
+     font-family:neue-kabel;
+     font-weight:300;
+     color:#FFFFFF;
+     text-align:center;
+     transition: all 0.2s;
+    }
+    a.button:hover{
+     color:#43D3FE;
+     background-color: #FFFFFF;
+    }
+    #button
+    {
+        margin: auto;
+        object-fit: contain;
+        width: 50%;
+        text-align: center;
+    }
+    
+    .imggallery {
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        overflow: hidden
+       
+    }
+    
+    .photogroup {
+        width: 30%;
+        margin: 10px;
+        float: left;   
+    }
+    
+    h3{
+        text-align: center;
+        font-size: 28pt;
+    }
+    .suonoimg {
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+        height:30%;
+        
+    }
+    .suonoimg2 {
+        width: 100%;
+        float: left;
+        margin-bottom: 20px;
+        
+    }
+    .section1 {
+        width: 100%;
+        height: auto;
+    }
+    .section2 {
+        width: 100%;
+    }
+    .section3 {
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .caption {
+        width: 100%;
+        text-align: center;
+    margin-top: 10px;}
+    
+    #container {
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 50px;
+    }
+    
+    #container2 {
+        padding-left: 55px;
+        padding-right: 55px;
+        width: auto;
+    }
+    
+     @media only screen and (max-width: 711px) {
+        #button
+    {
+        margin: auto;
+        object-fit: contain;
+        width: 40%;
+        text-align: center;
+    }
+    
+        .suonoimg {
+        width: 100%;
+        margin-bottom: 20px;
+
+        
+    }
+    .suonoimg2 {
+        width: 100%;
+        margin-bottom: 20px;
+        
+    }
+        .photogroup {
+        width: auto;
+        margin: 10px;
+    }
+    }
+
+</style>
+    
+<body>
+
+ 
+
+<div id="navbar">
+<div class="navbuttonsdiv">
+    <div id="logo"><a href="suonoshomepage.html"></a><div id="sketch"></div></div>
+        <script src="p5/sketch.js"></script>
+           <a class="navbuttons" href="suonoshomepage.html">
+            HOME
+           </a>
+           <a class="navbuttons" href="ourproduct.html">
+            OUR PRODUCT
+           </a>
+           <a class="navbuttons" href="team.html">
+            TEAM
+           </a>
+           <a class="navbuttons" href="invest.html">
+            INVEST
+           </a>
+           <a class="navbuttons" href="login.html">
+            LOG IN
+           </a>
+     </div>
+    </div>
+            
+
+    
+<div id="container">    
+
+    <img class=full src="wearesuono.jpg">  
+    
+<div id="container2"> 
+<div class="section1"> 
+    
+
+<h1>The Future of Sound</h1>
+    
+<div id="mission">
+<h4><em>Suono uses advanced sound-reduction technology to ensure that creators have a space suitable for their needs, allowing them to focus on developing their best, most high-quality work. </em></h4></div>
+    <br>
+      
+    <h3>These ugly blocks don't cut it. </h3>
+    
+</div>
+    
+     <script>
+      
+      $(document).ready(function() {
+        $(window).scroll( function(){
+            $(".img").each( function(i){
+                var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1'},800);
+                }      
+            });
+        });
+      });
+
+    
+    </script>
+    
+
+    <div class="img"><img class="img" class="fadein"  src="panels2.png" alt ="panels"></div>
+    <br>
+    <br>
+        <h3>Suono has you covered.  </h3>
+
+    <div class="img"><img class="img"  class="fadein" src=homeimage.png alt="air between panels"></div>
+    
+    <div class="img"><img class="img" class="fadein" src=homeimage2.png alt="slim sleek stylish"></div>
+    
+    <div id="button"><a href="ourproduct.html" class="button">Learn More</a></div>
+    
+   <h1>Features</h1>
+<div class="imggallery">
+        <div class="photogroup">
+
+    <img src="suono1.png"
+         class="suonoimg">
+        <p class="caption">Our sleek design and quality materials will keep our customers at the top of thier game</p>
+    </div>
+        <div class="photogroup">
+        <img src="suono2.png"
+                           class="suonoimg"> <p class="caption">Professional podcasters, gamers, and musicians can focus on thier craft instead of the background noise around them</p></div>
+        <div class="photogroup">
+        <img src="suono3.png"
+                                             class="suonoimg2">
+            <p class="caption">Our patent-pending design is an excellent investment.</p>
+                </div>
+
+        </div>
+        <div id="button"><a href="invest.html" class="button">Ready to Invest?</a></div>
+
+    </div>
+    </div>
+    <br>
+    <div id="footer"> 
+    <img src="suonocorner2.png" alt="panels" class="bottomleft">
+    <img src="suonocorner1.png" alt="panels" class="bottomright">
+       <br>
+        Copyright 2021 Suono - IYA C7 Case Studies Spring
+
+    </div>
+    
+</body>
+</html>

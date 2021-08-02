@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Capybarewery </title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+    
+	 <link rel="stylesheet" href="https://use.typekit.net/ggm0rhl.css">
+	
+	html {
+		margin: 0px;
+		padding: 0px;
+	}
+    
+    .jubinorm {
+        font-family: Jubilat;
+        font-size: 15px;
+        font-weight: normal;
+        color: black;
+        margin-top: 12px;
+    }
+    
+    .franknorm {
+        font-family: franklin-gothic-urw, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        color: black;
+        margin-top: 12px;
+    }
+    
+    .frankitl {
+        font-family: franklin-gothic-urw, sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 17px;
+        color: black;
+        margin-top: 12px;
+    }
+    
+    .frankbold {
+        font-family: franklin-gothic-urw, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        color: black;
+        margin-top: 12px;
+    }
+	
+	
+    body {
+        background-color: #ffdcb2;
+        margin: 0px;
+		padding: 0px;
+    }
+    
+    #container {
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+    
+     #containerback {
+        background-image: url(capybarewerytexture2.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: repeat-y;
+        
+        width: 100%;
+        height: 100%;
+    }
+    
+    .section {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-left: 40px;
+    }
+    
+    .top {
+        
+    flex-grow: 2;
+    height: auto;
+    background-color: #f3988b;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.4);
+    }
+    
+    .topleft {
+    flex-grow: 2;
+    flex-basis: 180px;
+    height: 100%;
+    padding-right: 25px;
+    }
+    
+    .topright {
+    flex-grow: 4;
+    flex-basis: 415px;    
+    height: auto;
+    padding: 25px 20px;
+    }
+	
+	.right2 {
+    flex-grow: 2;
+    height: 500px;
+    background-color: #f3988b;
+    border-radius: 15px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    
+	.lefthead {
+    background-color: #1d2848;
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-family: Jubilat, sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 5px;
+        text-align: center;
+	}
+    
+    .left {
+    flex-grow: 4;
+    flex-basis: 300px;
+    height: auto;
+    background-color: #F2E7E4;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.4);
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border: medium;
+    flex-direction: column;
+    }
+    
+    
+    .right {
+    flex-grow: 4;
+    flex-basis: 460px;
+    height: auto;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    justify-content: center;
+    }
+    
+    .timeright {
+        
+        text-align: right;
+        float: left;
+        width: auto;
+        height: auto;
+        padding-right: 12px;
+        margin-right: 12px;
+        border-right: black 3px solid;
+    }
+    
+    .timeleft {
+        text-align: left;
+        width: auto;
+        height: auto;
+    }
+    
+    .iconleft {
+        float: left;
+        width: auto;
+        height: 20px;
+        padding-right: 10px;
+    }
+    
+    .homeimg {
+        height: 300px;
+        background-image: url(capybareweryhomeimg-13.png);
+        background-clip: border-box;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    #mainimg {
+    
+		height: 100%;
+        
+    }
+	
+	.mainimgbox {
+   		 width: auto;
+    	height: 600px;
+	}
+	
+	#title {
+    background-color: #f3988b;
+    width: 100%;
+    height: 50px;
+	line-height: 50px;
+	color: black;
+	font-family: Jubilat, sans-serif;
+	font-size: 30px;
+    font-weight: 700;
+	padding: 5px 0px 5px 0px;
+	}
+	
+	#caption {
+    background-color: #1d2848;
+    width: 100%;
+    height: 25px;
+	line-height: 25px;
+	color: white;
+	font-family: Jubilat, sans-serif;
+	font-size: 13px;
+    font-weight: 200;
+	padding: 5px 0px 5px 0px;
+	}
+	
+    .bigtext {
+        font-size: 40px; 
+        line-height: 40px;
+    }
+    
+    .headingdiv {
+    height: auto;
+    width: 100%;
+    font-family: Jubilat, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 27px;
+    color: white;
+    line-height: 30px;
+    margin: 0px;
+    }
+    
+    .headingdivblack {
+        font-family: Jubilat, sans-serif;
+        font-weight: 700;
+        text-align: left;
+        font-size: 30px;
+        color: black;
+        line-height:33px;  
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .headingdivblue {
+    font-family: Jubilat, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 27px;
+    color: #658de2;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+	  .callout {
+    height: 0px;
+    width: auto;
+    font-family: Jubilat, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 40px;
+    color: black;
+    line-height: 43px;
+    margin: 25px 25px 0px 25px;
+    border-top-left-radius: 0px;
+    }
+    
+    .imgclass {
+        width: 100%;
+        height: auto;
+    }
+		
+    
+    .gifdiv {
+    height: 200px;
+    width: auto;
+    text-align: left;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+    background-image: url(capybara2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }   
+    
+    .headingitl {
+        font-family: Jubilat, sans-serif, italic;
+        font-weight: 700;
+        text-align: left;
+        margin: clear;
+        padding: clear;
+    }
+	
+    .pinkbox {
+    background-color: #f3988b;
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.4);
+    height: auto;
+    padding: 20px 250px 20px 25px;
+    position: relative;
+    float: inherit;
+    }
+    
+    .bluebox {
+        background-color: #1d2848;
+        width: auto;
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.4);
+        height: auto;
+        padding: 20px 25px 20px 170px;
+        position: relative;
+        margin-top: 20px;
+    }
+    
+    .imgbox {
+    width: 140px;
+    height: 239px;
+    padding: 30px;
+    float: right;
+    margin-left: 20px;
+    background-image: url(beerbottlemockupV1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-bottom-left-radius: 100px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 20;
+    }
+    
+    .imgboxleft {
+    width: 80px;
+    height: 309px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 0px;
+    float: left;
+    margin-right: 20px;
+    background-image: url(beerbottlemockupV2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    z-index: 10;
+    top: -41px;
+    left: 20px;
+    }
+    
+    .headingdiv {
+    height: auto;
+    width: 100%;
+    font-family: Jubilat, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 27px;
+    color: white;
+    line-height: 30px;
+    margin: 0px;
+    }
+    
+    .headingdivblack {
+        font-family: Jubilat, sans-serif;
+        font-weight: 700;
+        text-align: left;
+        font-size: 30px;
+        color: black;
+        line-height:33px;  
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .headingdiv2 {
+    height: auto;
+    width: 100%;
+    font-family: Jubilat, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 40px;
+    color: white;
+    line-height: 40px;
+    margin: 0px;
+    }
+    
+    .headingdivblack2 {
+        font-family: Jubilat, sans-serif;
+        font-weight: 700;
+        text-align: left;
+        font-size: 40px;
+        color: black;
+        line-height:40px;  
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    
+    .headingdivblue {
+    font-family: Jubilat, sans-serif;
+    font-weight: 700;
+    text-align: left;
+    font-size: 27px;
+    color: #658de2;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    .headingitl {
+        font-family: Jubilat, sans-serif, italic;
+        font-weight: 700;
+        text-align: left;
+        margin: clear;
+        padding: clear;
+    }
+    
+    .boxforbuttons {
+        width: auto;
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .boxbuttonspink {
+        width: auto;
+/*        height: 20px; */
+        line-height: 15px;
+        font-size: 13px;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 900;
+        color: #a5564f;
+        border: solid white 4px;
+        border-radius: 10px;
+        padding: 7px;
+        margin-right: 10px;
+        display: block;
+        flex-grow: 30%;
+    }
+    
+     .boxbuttonsblue {
+        width: auto;
+/*        height: 20px;*/
+        line-height: 15px;
+        font-size: 13px;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 900;
+        color: #658de2;
+        border: solid white 4px;
+        border-radius: 10px;
+        padding: 7px;
+        margin-right: 10px;
+         display: block;
+         flex-grow: 30%;
+        
+    }
+    
+    .boxbuttonsblue:hover {
+    background-color: rgba(101, 141, 226, 0.4);
+ 
+    }
+    
+    .boxbuttonspink:hover {
+    background-color: rgba(165, 86, 79, 0.4);
+    }
+    .textdiv {
+    height: auto;
+    width: auto;
+    font-family: Jubilat, sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 15px;
+    font-size: 13px;
+    }
+    
+    .boxforbuttons {
+        width: auto;
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .boxbuttonspink {
+        width: auto;
+/*        height: 20px; */
+        line-height: 15px;
+        font-size: 13px;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 900;
+        color: #a5564f;
+        border: solid white 4px;
+        border-radius: 10px;
+        padding: 7px;
+        margin-right: 10px;
+        display: block;
+        flex-grow: 30%;
+        text-align: center;
+    }
+    
+     .boxbuttonsblue {
+        width: auto;
+/*        height: 20px;*/
+        line-height: 15px;
+        font-size: 13px;
+        font-family: franklin-gothic-urw, sans-serif;
+        font-weight: 900;
+        color: #658de2;
+        border: solid white 4px;
+        border-radius: 10px;
+        padding: 7px;
+        margin-right: 10px;
+         display: block;
+         flex-grow: 30%;
+        text-align: center;
+    }
+    
+    .boxbuttonsblue:hover {
+    background-color: rgba(101, 141, 226, 0.4);
+ 
+    }
+    
+    .boxbuttonspink:hover {
+    background-color: rgba(165, 86, 79, 0.4);
+    }
+    
+    #header {
+        width: auto;
+        height: 80px;
+        margin-top: 60px;
+        text-align: center;
+        background-image: url(darkwood.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .headerbuttons {
+    width: 105px;
+    height: 60px;
+    float: left;
+    line-height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: clear;
+    }
+    
+    .headerbuttons:hover {
+    width: 97px;
+    height: 58px;
+    float: left;
+    line-height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: clear;
+    border-top: rgb(255,217,175,0.5) solid 4px;
+    border-left: rgb(255,217,175,0.5) solid 4px;
+    border-right: rgb(255,217,175,0.5) solid 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+        
+    }
+    
+     .headerbuttons2 {
+    width: 105px;
+    height: 60px;
+    float: right;
+    line-height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: clear;
+    }
+    
+     .headerbuttons2:hover {
+    width: 97px;
+    height: 58px;
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: rgb(255,217,175,0.5) solid 4px;
+    border-left: rgb(255,217,175,0.5) solid 4px;
+    border-right: rgb(255,217,175,0.5) solid 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    }
+    
+    
+    .headertype {
+    font-family: baskerville, serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    color: #ffdcb2;
+    text-align: center;
+    font-size: 25px;
+    padding: clear;
+    margin-right: 0px;
+    }
+    
+    .menu{
+        width: 590px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 18px;
+    }
+
+
+    #logo {
+    width: 174px;
+    height: 192px;
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+    
+     #logo:hover {
+    background-image: url(logohover.png);
+    }
+    
+    .footer {
+    background-color: rgb(0,0,0,0);
+    width: 100%;
+    height: 90px;
+    color: #ffdcb2;
+    font-family: Jubilat;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+    padding: auto;
+    }
+    
+    .footerwood {
+        height: 90px;
+        margin: 30px 50px 0px 50px;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 15px 15px 0px 0px;
+        background-image: url(darkwood.jpg);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+       @media screen and (max-width:754px) {
+
+           
+     .top {
+              flex-direction: column;
+               height: auto;
+    }
+           
+    .topright {
+        height: auto;
+        flex-basis: 220px;
+    }
+    .headingdiv2 {
+        font-size: 35px;
+    }
+    .headingdivblack2 {
+        font-size: 35px;
+    }
+           
+    .boxforbuttons {
+        margin-right: -0px;
+    }
+
+	}
+    
+	@media screen and (max-width:600px) {
+		
+  
+    
+	.menu {
+    width: 420px;
+    height: 50px;
+    margin-bottom: 20px;
+		}
+		
+	.headerbuttons {
+    width: 80px;
+    height: 50px;
+		}
+    
+        		
+	.headerbuttons2 {
+    width: 80px;
+    height: 50px;
+		}
+        
+    .headerbuttons:hover {
+    width: 72px;
+    height: 45px;
+        
+    }
+    
+     .headerbuttons2:hover {
+    width: 72px;
+    height: 45px;
+    
+    }
+     
+
+    .headingdiv2 {
+    font-size: 27px;
+    line-height: 30px;
+    
+    }
+    
+    .headingdivblack {
+            font-size: 27px;
+    }
+     .boxforbuttons {
+       width: 100%;     
+        }
+        
+    .headingdivblack2 {
+    font-size: 30px;
+    line-height: 30px;
+    }
+    
+		
+	.headertype {
+		font-size: 18px;	
+		}
+#logo {
+    width: 100px;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    }
+#header {
+    width: auto;
+    height: 68px;
+    margin-top: 45px;
+    text-align: center;
+    background-image: url(darkwood.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+		
+.imgbox {
+    width: 100px;
+    height: 180px;
+    float: left;
+    position: relative;
+    margin-left: 0px;
+    background-image: url(beerbottlemockupV1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-bottom-left-radius: 0px;
+    top: -1px;
+    left: -1px;
+    
+    
+    }
+        
+        .pinkbox {
+            padding: 20px 25px;
+        }
+	}
+    
+    @media screen and (max-width:859px) {
+        .left {
+            margin-bottom: 20px;
+        }
+    }
+	
+    @media screen and (max-width:500px) {
+        
+        .bluebox {
+            padding: 20px 25px 20px 25px;
+        }   
+        
+        .imgboxleft {
+    float:left;
+    position: relative;
+    width: 100px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 0px;
+    
+    }
+    }
+    
+    @media screen and (max-width:514px) {
+        .topright {
+            height: auto;
+        }
+}
+    
+	@media screen and (max-width:450px) {
+        
+    .bigtext {
+            font-size: 25px;
+            line-height: 25px; 
+        }
+    
+
+      .menu {
+    width: 285px;
+    height: 55px;
+		}
+        
+
+        
+	.headerbuttons {
+    width:50px;
+	height:33px;
+	
+		}
+		
+	.headerbuttons2 {
+    width: 50px;
+    height: 33px;
+		}
+		
+     .headerbuttons:hover {
+    width: 42px;
+    height: 33px;    
+    }
+    
+     .headerbuttons2:hover {
+    width: 42px;
+    height: 33px;
+    }    
+    
+	.headertype {
+		font-size: 13px;	
+		}
+    #logo {
+       width: 80px;
+	   height: 120px;
+    }
+   #header {
+    width: auto;
+    height: 55px;
+    margin-top: 35px;
+    text-align: center;
+    background-image: url(darkwood.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+		
+	}
+
+   
+    
+</style>
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+
+
+</script>	
+	
+</head>
+    
+<body>
+    <div id="containerback">
+    
+	
+    <div id="container">
+        
+    <div id="header">
+        <div class="menu">
+        <div class="headerbuttons" >
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryMenu.html">Menu</a></p>
+        </div>
+         
+        <div class="headerbuttons" >
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybrewerystore.html">Store</a></p>
+        </div>
+        <div class="headerbuttons2" >
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryContact.html">Contact</a></p>
+        </div>
+        <div class="headerbuttons2">
+            <p class="headertype"><a class="headertype" style="text-decoration: none;" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybarewerystory.html">Story</a></p>
+        </div>
+        </div>
+	
+    </div>        
+        
+	  <div class="section" >
+			
+		
+		<div class="top">
+            
+            <div class="topleft">
+             <div class="homeimg"></div>
+            </div>
+            <div class="topright">
+            
+            <div class='headingdiv2'>
+                 <div class='headingdivblack2'><em>Welcome to Capybarewery</em> </div>
+                 Capybara + Bar + Brewery
+                  </div>
+                
+                <div class='jubinorm'>We love craft beer, family, and capybara cuteness. We are excited for you to experience our handcrafted recipies and join the Capy family!</div>
+            
+                <div class='frankbold'><img class='iconleft' src="location.png">260 Alameda Dr. Palo Alto, CA</div>
+                <div class='timeright frankitl'> <img class=iconleft src="time.png">Mon - Fri <br> Sat</div>
+                <div class='timeleft franknorm'>10 am - 5 pm <br> 2 - 5 pm</div>
+                
+            </div>
+		
+				
+		</div>
+				
+	</div><!-- end section -->
+		
+
+		<div class='section'>
+        
+		
+        <div class='left'>
+            <a class='lefthead' href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryDailydoseofcuteGallery.html"> Daily Dose of Cute</a>
+			
+		<p style='padding: 0px 20px;'><img class="imgclass" src="cute.jpeg" alt="capybara meme"></p>
+        </div>
+        
+       <div class='right'>
+           
+           <div class='pinkbox'>
+              
+               <div class='imgbox'>
+             
+               </div>
+               
+                 <div class='headingdiv'>
+                 <div class='headingdivblack'><em>NEW </em> Arrival:</div>
+                 Sour Plum
+                  </div>
+               <div class='textdiv'>
+                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+               </div>
+               <div class='boxforbuttons'>
+               <div class='boxbuttonspink'>Order a 6-Pack</div><div class='boxbuttonspink'>Find a Store</div>
+                   </div>
+           
+          </div>
+           
+          <div class='bluebox'>
+              
+              <div class='imgboxleft'>
+             
+               </div>
+               <div class='headingdiv'>
+                   <div class='headingdivblue'><em>NEW</em>  Arrival:</div>
+                   Smoked Log on a 
+                  <br> Friday Night
+               </div>
+               <div class='textdiv' style='color: white;'>
+                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                   
+               </div>
+              <div class='boxforbuttons'>
+              <div class='boxbuttonsblue'>Order a 6-Pack</div>
+              <div class='boxbuttonsblue'>Find a Store</div>
+                  </div>
+          </div>
+           
+        </div>
+    
+    
+    </div> <!-- end section -->
+        
+        
+            
+    <div class='footer'>
+        
+       
+        <div class='footerwood'> Copyright 2021 @sheepianna1 - Legal | Alcohol License</div>
+    </div>
+                
+    
+    </div>
+    
+    <a id="logo" href="http://webdev.iyaclasses.com/~shaposhn/acad275/capybarewery/capybareweryhome.html"></a>
+    
+    </div>
+        
+    
+    
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Suono Website — Contact </title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="p5/sketch.js"></script>
+    <link rel="stylesheet" href="suonostyles.css">
+   <link rel="stylesheet" href="https://use.typekit.net/nzu2jwc.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="list-builder.js"></script>
+</head>
+    
+<style>
+    
+    
+    h4 {
+        text-align: left;
+        width: 70%;
+        margin-left: 10%;
+    }
+    
+    #label {
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px; 
+        line-height: 28px;
+        color: #f7f9f9;
+        margin-block-start: 0.4em;
+        margin-block-end: 0.4em;
+        color: #f7f9f9;
+        font-family: 'Mukta Vaani';
+        text-align: left;
+    } 
+
+    form {
+        text-align: left;
+        margin-left: 100px;
+        margin-bottom: 50px;
+    }
+    #left { 
+        float: left;
+        width: 50%;
+    }
+    #right { 
+        float: left;
+        width: 50%;
+    }
+    #footer {
+        clear: both;
+        position: relative;
+        bottom: 0px;
+    }
+    #text {
+        margin-top: 75px;
+    }
+
+    #text2 {
+        margin-top: 75px;
+        text-align: right;
+        width: 70%;
+        margin-left: 10%;
+    }
+    
+    input[type='text'] {  
+        font-family: 'Mukta Vaani';
+        height: 30px;
+        width: 240px;
+        margin-bottom: 20px;
+        font-size: 14pt;
+    }
+
+    input[type='textarea'] {  
+        font-family: 'Mukta Vaani';
+        height: 30px;
+        width: 240px;
+        margin-bottom: 20px;
+        font-size: 14pt;
+    }
+
+    input[type='submit'] {  
+        font-family: 'Mukta Vaani';
+        height: 30px;
+        width: 140px;
+        padding-bottom: 25px;
+        font-size: 16pt;
+    }
+
+    @media screen and (max-width:880px) {
+        #left { 
+        float: left;
+        width: 100%;
+    }
+        #right { 
+        float: left;
+        width: 100%;
+    }
+    form {
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    
+        }
+    }
+        @media screen and (max-width:1096px) {
+
+        textarea{
+            width: 260px;
+        }
+        
+    }
+    @media screen and (max-width:880px) {
+
+        textarea{
+            width: 240px;
+        }
+}
+</style>
+      <script>
+var checkpw = function(em1){
+    atspacing = em1.indexOf("@");
+    if ( em1.length >= 1  && em1.indexOf("@") >= 0  && em1.indexOf(".") > atspacing ) {
+        alert("Thanks, that is a valid e-mail address");
+        } 
+    else {
+            alert("Please enter a valid e-mail address");
+        }}
+    </script>
+<body>
+
+  
+
+<div id="navbar">
+<div class="navbuttonsdiv">
+    <div id="logo"><a href="suonoshomepage.html"></a><div id="sketch"></div></div>
+        <script src="p5/sketch.js"></script>
+           <a class="navbuttons" href="suonoshomepage.html">
+            HOME
+           </a>
+           <a class="navbuttons" href="ourproduct.html">
+            OUR PRODUCT
+           </a>
+           <a class="navbuttons" href="team.html">
+            TEAM
+           </a>
+           <a class="navbuttons" href="invest.html">
+            INVEST
+           </a>
+           <a class="navbuttons" href="login.html">
+            LOG IN
+           </a>
+     </div>
+    </div>
+            
+<div id="container">
+    
+       
+
+    
+<h1>Have More Questions?...</h1>
+<br><br><br><br>
+<div id="left">
+    <h4 id="text">Answer some of these questions and we'll be happy to get back to you with more information on what we do and how you can join us.</h4>
+    <h5 id="text2"> - The Suono Team</h5>
+</div>
+
+<!-- <br><br><br><br> -->
+<div id="right">
+    <form>
+    <label id="label">First Name</label>
+    <br>
+    <input id="name" type="text">
+    <br><br>
+    <label id="label">Last Name</label>
+    <br>
+    <input id="name" type="text">
+    <br><br>
+    <label id="label">Email</label>
+    <br>
+    <input id="email" type="text">
+    <br><br><br>
+    <textarea id="issue" name="issue" rows="8" cols="50" placeholder="How can we help?"></textarea>
+    <br><br><br>
+    <input type="submit" id="submit" value="Submit!">
+    </form>    
+</div>
+    
+      <div id="list-builder"></div>
+        <div id="popup-box">
+            <div id="popup-box-content">
+                <h1>Subscribe to Suono Newsletter</h1>
+                <p>
+                    Stay up to date on the latest products, press, and everything else! 
+                </p>
+                <form method=”post”>
+    
+                <input type="text" name="email" class="email" placeholder="johndoe@gmail.com">
+    
+                <input type="submit" class="check" value="Subscribe">
+    
+</form>
+            </div>
+        </div>
+        
+<script>
+	document.querySelector(".check").addEventListener("click", function(){
+		checkpw(document.querySelector(".email").value);
+	})
+    
+    
+</script>
+
+
+
+
+
+    
+</div> 
+    
+
+
+<div id="footer"> 
+    <img src="suonocorner2.png" alt="panels" class="bottomleft">
+    <img src="suonocorner1.png" alt="panels" class="bottomright">
+       <br>
+        Copyright 2021 Suono - IYA C7 Case Studies Spring
+
+    </div>    
+</body>
+</html>

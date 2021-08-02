@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Suono Website — Team </title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="p5/sketch.js"></script>
+    <link rel="stylesheet" href="suonostyles.css">
+   <link rel="stylesheet" href="https://use.typekit.net/nzu2jwc.css">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="/js/my.js"></script>
+
+<style>
+    #navbar {
+        position: fixed;
+        z-index: 5;
+    }
+    .profile {
+        border-radius: 100%;
+        display: inline-block;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 225px;
+        height: 225px;
+        transition: 1.5s;
+        position: relative;
+        z-index: 0;
+    }
+    .profile:hover {
+        transform: scale(1.2);
+        transition: 1.5s;
+    }
+    #members {
+        text-align: center;
+    }
+    #footer {
+        position: static;
+        bottom: 0px;
+        text-align: center;
+    }
+    #name {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    #title {
+        text-align: center;
+        margin-top: 20px;
+    }
+    #description {
+        text-align: center;
+        margin-top: 40px;
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+        display: block;
+        font-size: 14pt;
+        line-height: 1.5;
+    }
+
+    #footer {
+        clear: both;
+        position: relative;
+        bottom: 0px;
+    }
+</style>
+
+</head>
+    
+<body>
+<div id="navbar">
+<div class="navbuttonsdiv">
+    <div id="logo"> <a href="suonoshomepage.html"></a></div>
+           <a class="navbuttons" href="suonoshomepage.html">
+            HOME
+           </a>
+           <a class="navbuttons" href="aboutus.html">
+            ABOUT
+           </a>
+           <a class="navbuttons" href="contact.html">
+            CONTACT
+           </a>
+           <a class="navbuttons" href="team.html">
+            TEAM
+           </a>
+           <a class="navbuttons" href="invest.html">
+            INVEST
+           </a>
+     </div>
+    </div>
+
+            
+<div id="container">
+    <h1 id="page">The Developer Team</h1>
+    <br><br>
+    <div id="members">
+        <img class="profile" src="Jasmine.png" id="jasmine">
+        <img class="profile" src="Luc.png" id="luc">
+        <img class="profile" src="Anna.png" id="anna">
+        <img class="profile" src="Grace.png" id="grace">
+        <img class="profile" src="Alex.png" id="alex">
+    </div>
+    <div id="bio">
+        <h3 id="name">Click on a developer!</h3>
+        <h5 id="title"></h5>
+        <p id="description"></p> <!--You click on one of the pictures and the information changes here-->
+    </div>
+</div> 
+
+<script>
+    $(document).ready(function(){
+        $("#jasmine").on("mouseover", function(){
+            $(this).css.width = "300px";
+        }) //needs some help
+    });
+</script>
+<script>
+    document.querySelector("#page").addEventListener("click", function(){
+        document.querySelector("#jasmine").style.width = "225px";
+        document.querySelector("#jasmine").style.margin = "15px";
+
+        document.querySelector("#luc").style.width = "225px";
+        document.querySelector("#luc").style.margin = "15px";
+
+        document.querySelector("#anna").style.width = "225px";
+        document.querySelector("#anna").style.margin = "15px";
+
+        document.querySelector("#grace").style.width = "225px";
+        document.querySelector("#grace").style.margin = "15px";
+
+        document.querySelector("#alex").style.width = "225px";
+        document.querySelector("#alex").style.margin = "15px";
+
+        document.querySelector("#name").innerHTML = "Click on a team member!";
+        document.querySelector("#title").innerHTML = "";
+        document.querySelector("#description").innerHTML = "";
+
+    });
+
+    document.querySelector("#jasmine").addEventListener("click", function(){
+        document.querySelector("#luc").style.width = "225px";
+        document.querySelector("#luc").style.margin = "5px";
+
+        document.querySelector("#anna").style.width = "225px";
+        document.querySelector("#anna").style.margin = "5px";
+
+        document.querySelector("#grace").style.width = "225px";
+        document.querySelector("#grace").style.margin = "5px";
+
+        document.querySelector("#alex").style.width = "225px";
+        document.querySelector("#alex").style.margin = "5px";
+
+        document.querySelector("#name").innerHTML = "Jasmine Liao"
+        document.querySelector("#title").innerHTML = ""
+        document.querySelector("#description").innerHTML = "Hailing from Hong Kong, Jasmine is a student studying Arts, Technology, and the Business of Innovation. She’s also an innovator, graphic designer, creator, and storyteller who cares about ethical design. In her free time, she is a Black Mirror fanatic, ultimate frisbee player, oat milk aficionado, nostalgia junkie, and an a capella singer."
+    });
+
+
+    document.querySelector("#luc").addEventListener("click", function(){
+        document.querySelector("#jasmine").style.width = "225px";
+        document.querySelector("#jasmine").style.margin = "5px";
+
+        document.querySelector("#anna").style.width = "225px";
+        document.querySelector("#anna").style.margin = "5px";
+
+        document.querySelector("#grace").style.width = "225px";
+        document.querySelector("#grace").style.margin = "5px";
+
+        document.querySelector("#alex").style.width = "225px";
+        document.querySelector("#alex").style.margin = "5px";
+
+        document.querySelector("#name").innerHTML = "Luc Hosy"
+        document.querySelector("#title").innerHTML = ""
+        document.querySelector("#description").innerHTML = "From La Jolla, California, Luc Hosy is a USC student studying Arts, Technology, and the Business of Innovation. He is passionate about the area where design and art meets technology and engineering. In his free time, he fuels his adoration for making through woodworking, 3D printing, and working on cars. "
+    });
+
+    document.querySelector("#anna").addEventListener("click", function(){
+        document.querySelector("#luc").style.width = "225px";
+        document.querySelector("#luc").style.margin = "5px";
+
+        document.querySelector("#jasmine").style.width = "225px";
+        document.querySelector("#jasmine").style.margin = "5px";
+
+        document.querySelector("#grace").style.width = "225px";
+        document.querySelector("#grace").style.margin = "5px";
+
+        document.querySelector("#alex").style.width = "225px";
+        document.querySelector("#alex").style.margin = "5px";
+
+        document.querySelector("#name").innerHTML = "Anna Shaposhnik"
+        document.querySelector("#title").innerHTML = ""
+        document.querySelector("#description").innerHTML = "Anna Shaposhnik combines art and technology to create delight, using her passions for graphic design, 3D-visualization, and robotics. She’s a past co-president of FIRST Robotics Team 846 and furthers her reach by designing for robotics competitions and running interdisciplinary workshops through Tesseract Initiative. Now, she is a freshman at USC majoring in Arts, Technology, and the Business of Innovation and minoring in Astronautical Engineering, and a proud Graphics Engineer for USC’s Rocket Propulsion Laboratory, and member of the Harman Academy for Polymathic Study. "
+    });
+
+
+    document.querySelector("#grace").addEventListener("click", function(){
+        document.querySelector("#luc").style.width = "225px";
+        document.querySelector("#luc").style.margin = "5px";
+
+        document.querySelector("#anna").style.width = "225px";
+        document.querySelector("#anna").style.margin = "5px";
+
+        document.querySelector("#jasmine").style.width = "225px";
+        document.querySelector("#jasmine").style.margin = "5px";
+
+        document.querySelector("#alex").style.width = "225px";
+        document.querySelector("#alex").style.margin = "5px";
+
+        document.querySelector("#name").innerHTML = "Grace MacPherson"
+        document.querySelector("#title").innerHTML = ""
+        document.querySelector("#description").innerHTML = "Originally from London, Grace has lived in three other cities before calling Los Angeles home. Obsessed with experiential design, she loves all things storytelling, always trying to find the most interesting way to merge technology and world building. In her free time, she is always writing up a storm, exploring everything from museums to popups for the latest inspiration. She also adores hunting through antique fairs, analyzing sitcoms, and learning about mythology."
+    });
+
+
+
+    document.querySelector("#alex").addEventListener("click", function(){
+        document.querySelector("#luc").style.width = "225px";
+        document.querySelector("#luc").style.margin = "5px";
+
+        document.querySelector("#anna").style.width = "225px";
+        document.querySelector("#anna").style.margin = "5px";
+
+        document.querySelector("#grace").style.width = "225px";
+        document.querySelector("#grace").style.margin = "5px";
+
+        document.querySelector("#jasmine").style.width = "225px";
+        document.querySelector("#jasmine").style.margin = "5px";
+
+        document.querySelector("#name").innerHTML = "Alexandra Abrams"
+        document.querySelector("#title").innerHTML = ""
+        document.querySelector("#description").innerHTML = "Born in Singapore and then moving the United States, Alexandra is a passionate creative who looks to the world around her to solve problems. She comes from a traditional fine arts background which has allowed her to explore graphic design and media. She hopes to implement her expertise by cultivating immersive experiences. In her free time she loves to travel and challenge herself creatively through fashion." 
+    });
+
+</script>
+
+ <div id="footer"> 
+    <img src="suonocorner2.png" alt="panels" class="bottomleft">
+    <img src="suonocorner1.png" alt="panels" class="bottomright">
+       <br>
+        Copyright 2021 Suono - IYA C7 Case Studies Spring
+
+    </div>
+    
+</body>
+</html>
